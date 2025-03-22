@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Nigerian Language Translator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This is a simple **Nigerian Language Translator** app built with **React (Frontend)** and **Node.js + Express (Backend)**. It allows users to:
+- Translate text between **English, Yoruba, Hausa, and Igbo**.
+- Use **speech-to-text** (voice input) to enter text.
+- Use **text-to-speech** to listen to translated text.
 
-## Available Scripts
+## Features
+✅ Translate text between supported languages  
+✅ Speech-to-text (voice input) 🎤  
+✅ Text-to-speech (read aloud) 🔊  
+✅ Simple and responsive UI  
 
-In the project directory, you can run:
+---
+## 🛠 Tech Stack
+### **Frontend:**
+- React.js
+- Tailwind CSS for styling
+- Web Speech API for **speech-to-text & text-to-speech**
 
-### `npm start`
+### **Backend:**
+- Node.js with Express.js
+- `google-translate-api-x` for translation
+- CORS and dotenv support
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
+## 🚀 How to Run the App
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-repo/translator-app.git
+cd translator-app
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2️⃣ Set Up the Backend (Node.js)
+1. Navigate to the backend folder:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install express cors google-translate-api-x
+   ```
+3. Start the backend server:
+   ```bash
+   node server.js
+   ```
 
-### `npm test`
+### 3️⃣ Set Up the Frontend (React)
+1. Navigate to the frontend folder:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the frontend:
+   ```bash
+   npm start
+   ```
+4. Open the app in your browser:
+   👉 `http://localhost:3000`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+## 📌 Usage Instructions
+1. **Enter text** in the input box (or use 🎤 voice input).
+2. **Select the languages** for translation.
+3. Click **Translate** to get the translated text.
+4. Click **🔊 Play** to hear the translated text aloud.
 
-### `npm run build`
+---
+## 🔥 Troubleshooting
+### ❌ Getting a "Network" Error in Speech Recognition?
+- Use **Google Chrome** (Edge may not support Web Speech API).
+- Check if the microphone **has permission** (`chrome://settings/content/microphone`).
+- Try running the frontend on **HTTPS** instead of HTTP.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ❌ Backend Not Running?
+- Ensure Node.js is installed (`node -v`).
+- Check if another process is using port 5000:
+  ```bash
+  sudo lsof -i :5000  # Linux/macOS
+  netstat -ano | findstr :5000  # Windows
+  ```
+- Kill the process and restart the server:
+  ```bash
+  kill -9 <PID>  # Linux/macOS
+  taskkill /PID <PID> /F  # Windows
+  ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
+## 📜 License
+This project is open-source and free to use.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ✨ Enjoy Translating! 🚀
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
