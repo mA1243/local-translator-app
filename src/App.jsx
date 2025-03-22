@@ -20,7 +20,7 @@ export default function Translator() {
             recognition.start();
 
             recognition.onresult = (event) => {
-                setText(event.results[0][0].transcript);
+                setInputText(event.results[0][0].transcript);
             };
 
             recognition.onerror = (event) => {
